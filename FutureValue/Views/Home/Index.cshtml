@@ -1,42 +1,27 @@
 ﻿
-
-@model FutureValue
+@* 
+    
+*@
+@model FutureValueModel
 @{
     Layout = null;
 }
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Home Page</title>
-    <style>
-        /* all of the CSS styles from figure 2-14 go here */
-        body{
-            padding: 1em;
-            font-family: Arial, Arial, Helvetica, sans-serif
-        }
-        
-        h1 {
-            margin-top:0
-            color: navy;
-        }
 
-        label {
-            display: inline-block;
-            width: 10em;
-            padding-right: 1em;
-        }
-
-        div {
-            margin-bottom: .5em;
-        }
-    </style>
+     
+       
+  
 </head>
 <body>
     <h1>Future Value Calculator</h1>
     <form asp-action="Index" method="post">
         <div>
-            <label> asp-for="MonthlyInvestment">Monthly Investment:</label>
+            <label asp-for="MonthlyInvestment">Monthly Investment:</label>
             <input asp-for="MonthlyInvestment" />
         </div>
         <div>
@@ -44,11 +29,7 @@
             <input asp-for="YearlyInterestRate" />
         </div>
         <div>
-            <label asp-for="Years">Number of Years</label>
-            <input asp-for="Years" />
-        </div>
-        <div>
-            <label> asp-for="Years">Number of Years:</label>
+            <label asp-for="Years">Number of Years:</label>
             <input asp-for="Years" />
         </div>
         <div>
@@ -57,6 +38,8 @@
         </div>
         <button type="submit">Calculate</button>
         <a asp-action="Index">Clear</a>
+
     </form>
+      
 </body>
 </html>
